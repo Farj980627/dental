@@ -35,7 +35,7 @@ Partial Class Admin_Categoria
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Panel1.Controls.Add(Me.btnEliminar)
         Me.Panel1.Controls.Add(Me.btnCancelar)
         Me.Panel1.Controls.Add(Me.cbProductType)
@@ -100,7 +100,7 @@ Partial Class Admin_Categoria
         '
         'btnAgregar
         '
-        Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnAgregar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.ForeColor = System.Drawing.Color.White
         Me.btnAgregar.Location = New System.Drawing.Point(152, 150)
@@ -126,7 +126,7 @@ Partial Class Admin_Categoria
         '
         'txtProductType
         '
-        Me.txtProductType.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProductType.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProductType.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProductType.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProductType.ForeColor = System.Drawing.Color.White

@@ -28,8 +28,8 @@ Partial Class Login
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.bntSalir = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.bntSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,7 +48,7 @@ Partial Class Login
         '
         'btnAcceder
         '
-        Me.btnAcceder.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnAcceder.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnAcceder.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAcceder.ForeColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.btnAcceder.Image = CType(resources.GetObject("btnAcceder.Image"), System.Drawing.Image)
@@ -91,13 +91,23 @@ Partial Class Login
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Panel1.Controls.Add(Me.bntSalir)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(-1, -27)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1151, 148)
         Me.Panel1.TabIndex = 2
+        '
+        'bntSalir
+        '
+        Me.bntSalir.Image = Global.Dental.My.Resources.Resources.salir_color
+        Me.bntSalir.Location = New System.Drawing.Point(1102, 27)
+        Me.bntSalir.Name = "bntSalir"
+        Me.bntSalir.Size = New System.Drawing.Size(46, 43)
+        Me.bntSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.bntSalir.TabIndex = 37
+        Me.bntSalir.TabStop = False
         '
         'Label1
         '
@@ -111,16 +121,6 @@ Partial Class Login
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ACCESO AL SISTEMA"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'bntSalir
-        '
-        Me.bntSalir.Image = Global.Dental.My.Resources.Resources.salir_color
-        Me.bntSalir.Location = New System.Drawing.Point(1102, 27)
-        Me.bntSalir.Name = "bntSalir"
-        Me.bntSalir.Size = New System.Drawing.Size(46, 43)
-        Me.bntSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.bntSalir.TabIndex = 37
-        Me.bntSalir.TabStop = False
         '
         'Login
         '

@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ActiveControl = PictureBox1
+        Me.ActiveControl = Label1
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

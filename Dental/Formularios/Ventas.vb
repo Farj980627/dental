@@ -1211,38 +1211,43 @@
 
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
 
-        id1 = consultas.getFavorites(0)("id_1")
-        id2 = consultas.getFavorites(0)("id_2")
-        id3 = consultas.getFavorites(0)("id_3")
-        id4 = consultas.getFavorites(0)("id_4")
-        id5 = consultas.getFavorites(0)("id_5")
-        id6 = consultas.getFavorites(0)("id_6")
-        id7 = consultas.getFavorites(0)("id_7")
-        id8 = consultas.getFavorites(0)("id_8")
-        id9 = consultas.getFavorites(0)("id_9")
-        id10 = consultas.getFavorites(0)("id_10")
-        id11 = consultas.getFavorites(0)("id_11")
-        id12 = consultas.getFavorites(0)("id_12")
-        id13 = consultas.getFavorites(0)("id_13")
-        id14 = consultas.getFavorites(0)("id_14")
-        id15 = consultas.getFavorites(0)("id_15")
 
-        btnFavorito1.Text = consultas.viewDI1(id1).ToString
-        btnFavorito2.Text = consultas.viewDI1(id2).ToString
-        btnFavorito3.Text = consultas.viewDI1(id3).ToString
-        btnFavorito4.Text = consultas.viewDI1(id4).ToString
-        btnFavorito5.Text = consultas.viewDI1(id5).ToString
-        btnFavorito6.Text = consultas.viewDI1(id6).ToString
-        btnFavorito7.Text = consultas.viewDI1(id7).ToString
-        btnFavorito8.Text = consultas.viewDI1(id8).ToString
-        btnFavorito9.Text = consultas.viewDI1(id9).ToString
-        btnFavorito10.Text = consultas.viewDI1(id10).ToString
-        btnFavorito11.Text = consultas.viewDI1(id11).ToString
-        btnFavorito12.Text = consultas.viewDI1(id12).ToString
-        btnFavorito13.Text = consultas.viewDI1(id13).ToString
-        btnFavorito14.Text = consultas.viewDI1(id14).ToString
-        btnFavorito15.Text = consultas.viewDI1(id15).ToString
+            id1 = consultas.getFavorites(0)("id_1")
+            id2 = consultas.getFavorites(0)("id_2")
+            id3 = consultas.getFavorites(0)("id_3")
+            id4 = consultas.getFavorites(0)("id_4")
+            id5 = consultas.getFavorites(0)("id_5")
+            id6 = consultas.getFavorites(0)("id_6")
+            id7 = consultas.getFavorites(0)("id_7")
+            id8 = consultas.getFavorites(0)("id_8")
+            id9 = consultas.getFavorites(0)("id_9")
+            id10 = consultas.getFavorites(0)("id_10")
+            id11 = consultas.getFavorites(0)("id_11")
+            id12 = consultas.getFavorites(0)("id_12")
+            id13 = consultas.getFavorites(0)("id_13")
+            id14 = consultas.getFavorites(0)("id_14")
+            id15 = consultas.getFavorites(0)("id_15")
+
+            btnFavorito1.Text = consultas.viewDI1(id1).ToString
+            btnFavorito2.Text = consultas.viewDI1(id2).ToString
+            btnFavorito3.Text = consultas.viewDI1(id3).ToString
+            btnFavorito4.Text = consultas.viewDI1(id4).ToString
+            btnFavorito5.Text = consultas.viewDI1(id5).ToString
+            btnFavorito6.Text = consultas.viewDI1(id6).ToString
+            btnFavorito7.Text = consultas.viewDI1(id7).ToString
+            btnFavorito8.Text = consultas.viewDI1(id8).ToString
+            btnFavorito9.Text = consultas.viewDI1(id9).ToString
+            btnFavorito10.Text = consultas.viewDI1(id10).ToString
+            btnFavorito11.Text = consultas.viewDI1(id11).ToString
+            btnFavorito12.Text = consultas.viewDI1(id12).ToString
+            btnFavorito13.Text = consultas.viewDI1(id13).ToString
+            btnFavorito14.Text = consultas.viewDI1(id14).ToString
+            btnFavorito15.Text = consultas.viewDI1(id15).ToString
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 

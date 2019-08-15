@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Beer_Can_icon-icons.com_68781.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
       <HintPath>..\..\..\itextsharp.dll</HintPath>
@@ -225,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salir color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Beer_Can_icon-icons.com_68781.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -26,6 +26,7 @@ Partial Class Inventario
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnPdf = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
@@ -45,7 +46,6 @@ Partial Class Inventario
         Me.dtpFin = New System.Windows.Forms.DateTimePicker()
         Me.dtpInicio = New System.Windows.Forms.DateTimePicker()
         Me.dgvProducto = New System.Windows.Forms.DataGridView()
-        Me.btnPdf = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -85,10 +85,24 @@ Partial Class Inventario
         Me.Panel1.Size = New System.Drawing.Size(636, 146)
         Me.Panel1.TabIndex = 3
         '
+        'btnPdf
+        '
+        Me.btnPdf.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPdf.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btnPdf.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPdf.ForeColor = System.Drawing.Color.White
+        Me.btnPdf.Location = New System.Drawing.Point(308, 3)
+        Me.btnPdf.Name = "btnPdf"
+        Me.btnPdf.Size = New System.Drawing.Size(319, 65)
+        Me.btnPdf.TabIndex = 9
+        Me.btnPdf.Text = "PDF!"
+        Me.btnPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnPdf.UseVisualStyleBackColor = False
+        '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(308, 79)
@@ -115,7 +129,7 @@ Partial Class Inventario
         '
         'txtCodigo
         '
-        Me.txtCodigo.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtCodigo.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodigo.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodigo.ForeColor = System.Drawing.Color.White
@@ -128,7 +142,7 @@ Partial Class Inventario
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(12, 79)
@@ -170,7 +184,7 @@ Partial Class Inventario
         '
         'txtCategoria
         '
-        Me.txtCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCategoria.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCategoria.ForeColor = System.Drawing.Color.White
@@ -196,7 +210,7 @@ Partial Class Inventario
         '
         'txtNombre
         '
-        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.White
@@ -209,7 +223,7 @@ Partial Class Inventario
         'btnMostrar
         '
         Me.btnMostrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMostrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnMostrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnMostrar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMostrar.ForeColor = System.Drawing.Color.White
         Me.btnMostrar.Location = New System.Drawing.Point(9, 16)
@@ -234,7 +248,7 @@ Partial Class Inventario
         'btnActualizar
         '
         Me.btnActualizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnActualizar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnActualizar.ForeColor = System.Drawing.Color.White
         Me.btnActualizar.Location = New System.Drawing.Point(114, 78)
@@ -248,7 +262,7 @@ Partial Class Inventario
         'btnEliminar
         '
         Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
         Me.btnEliminar.Location = New System.Drawing.Point(297, 1)
@@ -262,7 +276,7 @@ Partial Class Inventario
         'btnNuevo
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnNuevo.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.Color.White
         Me.btnNuevo.Location = New System.Drawing.Point(3, 1)
@@ -287,7 +301,7 @@ Partial Class Inventario
         'btnBuscarFechas
         '
         Me.btnBuscarFechas.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBuscarFechas.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnBuscarFechas.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnBuscarFechas.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarFechas.ForeColor = System.Drawing.Color.White
         Me.btnBuscarFechas.Location = New System.Drawing.Point(152, 73)
@@ -324,7 +338,7 @@ Partial Class Inventario
         '
         'dgvProducto
         '
-        Me.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.dgvProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
@@ -349,20 +363,6 @@ Partial Class Inventario
         Me.dgvProducto.RowTemplate.Height = 24
         Me.dgvProducto.Size = New System.Drawing.Size(1286, 298)
         Me.dgvProducto.TabIndex = 8
-        '
-        'btnPdf
-        '
-        Me.btnPdf.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnPdf.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.btnPdf.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPdf.ForeColor = System.Drawing.Color.White
-        Me.btnPdf.Location = New System.Drawing.Point(308, 3)
-        Me.btnPdf.Name = "btnPdf"
-        Me.btnPdf.Size = New System.Drawing.Size(319, 65)
-        Me.btnPdf.TabIndex = 9
-        Me.btnPdf.Text = "PDF!"
-        Me.btnPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnPdf.UseVisualStyleBackColor = False
         '
         'Inventario
         '

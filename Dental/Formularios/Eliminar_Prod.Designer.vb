@@ -31,7 +31,7 @@ Partial Class Eliminar_Prod
         '
         'txtID
         '
-        Me.txtID.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.ForeColor = System.Drawing.Color.White

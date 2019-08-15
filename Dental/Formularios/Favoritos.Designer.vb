@@ -153,7 +153,7 @@ Partial Class Favoritos
         '
         'txtID1
         '
-        Me.txtID1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID1.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID1.ForeColor = System.Drawing.Color.White
@@ -193,7 +193,7 @@ Partial Class Favoritos
         '
         'txtProd1
         '
-        Me.txtProd1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd1.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd1.ForeColor = System.Drawing.Color.White
@@ -205,7 +205,7 @@ Partial Class Favoritos
         '
         'txtID2
         '
-        Me.txtID2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID2.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID2.ForeColor = System.Drawing.Color.White
@@ -217,7 +217,7 @@ Partial Class Favoritos
         '
         'txtID3
         '
-        Me.txtID3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID3.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID3.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID3.ForeColor = System.Drawing.Color.White
@@ -229,7 +229,7 @@ Partial Class Favoritos
         '
         'txtID4
         '
-        Me.txtID4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID4.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID4.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID4.ForeColor = System.Drawing.Color.White
@@ -241,7 +241,7 @@ Partial Class Favoritos
         '
         'txtID5
         '
-        Me.txtID5.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID5.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID5.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID5.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID5.ForeColor = System.Drawing.Color.White
@@ -253,7 +253,7 @@ Partial Class Favoritos
         '
         'txtProd2
         '
-        Me.txtProd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd2.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd2.ForeColor = System.Drawing.Color.White
@@ -265,7 +265,7 @@ Partial Class Favoritos
         '
         'txtProd3
         '
-        Me.txtProd3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd3.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd3.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd3.ForeColor = System.Drawing.Color.White
@@ -277,7 +277,7 @@ Partial Class Favoritos
         '
         'txtProd4
         '
-        Me.txtProd4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd4.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd4.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd4.ForeColor = System.Drawing.Color.White
@@ -289,7 +289,7 @@ Partial Class Favoritos
         '
         'txtProd5
         '
-        Me.txtProd5.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd5.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd5.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd5.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd5.ForeColor = System.Drawing.Color.White
@@ -302,7 +302,7 @@ Partial Class Favoritos
         'btnConfirmar
         '
         Me.btnConfirmar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnConfirmar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmar.ForeColor = System.Drawing.Color.White
         Me.btnConfirmar.Location = New System.Drawing.Point(1060, 613)
@@ -550,7 +550,7 @@ Partial Class Favoritos
         '
         'txtID6
         '
-        Me.txtID6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID6.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID6.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID6.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID6.ForeColor = System.Drawing.Color.White
@@ -562,7 +562,7 @@ Partial Class Favoritos
         '
         'txtID7
         '
-        Me.txtID7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID7.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID7.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID7.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID7.ForeColor = System.Drawing.Color.White
@@ -574,7 +574,7 @@ Partial Class Favoritos
         '
         'txtID8
         '
-        Me.txtID8.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID8.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID8.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID8.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID8.ForeColor = System.Drawing.Color.White
@@ -586,7 +586,7 @@ Partial Class Favoritos
         '
         'txtID9
         '
-        Me.txtID9.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID9.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID9.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID9.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID9.ForeColor = System.Drawing.Color.White
@@ -598,7 +598,7 @@ Partial Class Favoritos
         '
         'txtID10
         '
-        Me.txtID10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID10.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID10.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID10.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID10.ForeColor = System.Drawing.Color.White
@@ -610,7 +610,7 @@ Partial Class Favoritos
         '
         'txtID11
         '
-        Me.txtID11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID11.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID11.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID11.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID11.ForeColor = System.Drawing.Color.White
@@ -622,7 +622,7 @@ Partial Class Favoritos
         '
         'txtID12
         '
-        Me.txtID12.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID12.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID12.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID12.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID12.ForeColor = System.Drawing.Color.White
@@ -634,7 +634,7 @@ Partial Class Favoritos
         '
         'txtID13
         '
-        Me.txtID13.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID13.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID13.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID13.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID13.ForeColor = System.Drawing.Color.White
@@ -646,7 +646,7 @@ Partial Class Favoritos
         '
         'txtID14
         '
-        Me.txtID14.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID14.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID14.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID14.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID14.ForeColor = System.Drawing.Color.White
@@ -658,7 +658,7 @@ Partial Class Favoritos
         '
         'txtID15
         '
-        Me.txtID15.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtID15.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtID15.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID15.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID15.ForeColor = System.Drawing.Color.White
@@ -670,7 +670,7 @@ Partial Class Favoritos
         '
         'txtProd6
         '
-        Me.txtProd6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd6.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd6.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd6.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd6.ForeColor = System.Drawing.Color.White
@@ -682,7 +682,7 @@ Partial Class Favoritos
         '
         'txtProd7
         '
-        Me.txtProd7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd7.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd7.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd7.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd7.ForeColor = System.Drawing.Color.White
@@ -694,7 +694,7 @@ Partial Class Favoritos
         '
         'txtProd8
         '
-        Me.txtProd8.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd8.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd8.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd8.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd8.ForeColor = System.Drawing.Color.White
@@ -706,7 +706,7 @@ Partial Class Favoritos
         '
         'txtProd9
         '
-        Me.txtProd9.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd9.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd9.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd9.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd9.ForeColor = System.Drawing.Color.White
@@ -718,7 +718,7 @@ Partial Class Favoritos
         '
         'txtProd10
         '
-        Me.txtProd10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd10.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd10.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd10.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd10.ForeColor = System.Drawing.Color.White
@@ -730,7 +730,7 @@ Partial Class Favoritos
         '
         'txtProd11
         '
-        Me.txtProd11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd11.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd11.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd11.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd11.ForeColor = System.Drawing.Color.White
@@ -742,7 +742,7 @@ Partial Class Favoritos
         '
         'txtProd12
         '
-        Me.txtProd12.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd12.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd12.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd12.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd12.ForeColor = System.Drawing.Color.White
@@ -754,7 +754,7 @@ Partial Class Favoritos
         '
         'txtProd13
         '
-        Me.txtProd13.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd13.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd13.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd13.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd13.ForeColor = System.Drawing.Color.White
@@ -766,7 +766,7 @@ Partial Class Favoritos
         '
         'txtProd14
         '
-        Me.txtProd14.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd14.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd14.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd14.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd14.ForeColor = System.Drawing.Color.White
@@ -778,7 +778,7 @@ Partial Class Favoritos
         '
         'txtProd15
         '
-        Me.txtProd15.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.txtProd15.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProd15.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtProd15.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProd15.ForeColor = System.Drawing.Color.White
