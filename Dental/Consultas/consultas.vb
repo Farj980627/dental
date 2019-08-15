@@ -133,6 +133,17 @@ Public Class consultas
         con.Close()
         Return cant
     End Function
+    Public Shared Function getCantidadInventarioBYID(pid) As String
+        Dim con As MySqlConnection = conexion.conection
+        Dim cant As String = 0
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT quantity FROM products WHERE id_product='{0}' ", pid), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            cant = reader(0).ToString
+        End If
+        con.Close()
+        Return cant
+    End Function
     Public Shared Sub updInventario(cantidad, pname)
         Dim con As MySqlConnection = conexion.conection
         Dim cmd As MySqlCommand = New MySqlCommand(String.Format("UPDATE products SET quantity='{0}' WHERE id_product='{1}'", cantidad, pname), con)
@@ -194,5 +205,82 @@ Public Class consultas
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
+
+    'Consultas para favoritos
+    Public Shared Function getFavorites() As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM favorites ORDER BY id_favorito DESC LIMIT 1 "), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Function getProdutToFav(idpro) As String
+        Dim con As MySqlConnection = conexion.conection
+        Dim cant As String = ""
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT name, brand FROM products WHERE id_product='{0}' ", idpro), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            cant = reader(0).ToString & "," & reader(1).ToString
+        End If
+        con.Close()
+        Return cant
+    End Function
+
+    Public Shared Sub insFav(pid1, pid2, pid3, pid4, pid5, pid6, pid7, pid8, pid9, pid10, pid11, pid12, pid13, pid14, pid15)
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("INSERT INTO favorites(id_1,id_2,id_3,id_4,id_5,id_6,id_7,id_8,id_9,id_10,id_11,id_12,id_13,id_14,id_15) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')", pid1, pid2, pid3, pid4, pid5, pid6, pid7, pid8, pid9, pid10, pid11, pid12, pid13, pid14, pid15), con)
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+    'Consultas para botones favoritos 
+    Public Shared Function viewDI1(ByVal pid1 As String) As String
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT name, brand FROM products WHERE id_product='{0}' ", pid1), con)
+        Dim one As String = ""
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            one = reader(0).ToString & "," & reader(1).ToString
+        End If
+        Return one
+
+    End Function
+    Public Shared Function getSix(id) As Boolean
+        Dim con As MySqlConnection = conexion.conection
+        Dim log As Boolean = False
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name LIKE 'Six%' and id_product= '{0}'", id), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            If reader.HasRows = True Then
+                log = True
+            End If
+        End If
+        con.Close()
+        Return log
+    End Function
+
+    Public Shared Function notgetSix(brcd) As Boolean
+        Dim con As MySqlConnection = conexion.conection
+        Dim log As Boolean = False
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name NOT LIKE 'Six%' and barcode= '{0}'", brcd), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            If reader.HasRows = True Then
+                log = True
+            End If
+        End If
+        con.Close()
+        Return log
+    End Function
+    Public Shared Function notgetSixDT(brcd) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name NOT LIKE 'Six%' and barcode= '{0}' ", brcd), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
 
 End Class

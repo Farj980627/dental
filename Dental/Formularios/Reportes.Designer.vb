@@ -65,7 +65,7 @@ Partial Class Reportes
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1074, 249)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1286, 249)
         Me.TableLayoutPanel1.TabIndex = 8
         '
         'Panel1
@@ -74,9 +74,9 @@ Partial Class Reportes
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(540, 3)
+        Me.Panel1.Location = New System.Drawing.Point(646, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(531, 118)
+        Me.Panel1.Size = New System.Drawing.Size(637, 118)
         Me.Panel1.TabIndex = 3
         '
         'lblTotal
@@ -126,7 +126,7 @@ Partial Class Reportes
         Me.Panel2.Controls.Add(Me.btnMostrar)
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(531, 118)
+        Me.Panel2.Size = New System.Drawing.Size(637, 118)
         Me.Panel2.TabIndex = 4
         '
         'bntDiario
@@ -137,7 +137,7 @@ Partial Class Reportes
         Me.bntDiario.ForeColor = System.Drawing.Color.White
         Me.bntDiario.Location = New System.Drawing.Point(0, 64)
         Me.bntDiario.Name = "bntDiario"
-        Me.bntDiario.Size = New System.Drawing.Size(531, 54)
+        Me.bntDiario.Size = New System.Drawing.Size(637, 54)
         Me.bntDiario.TabIndex = 6
         Me.bntDiario.Text = "Reporte Diario"
         Me.bntDiario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -151,7 +151,7 @@ Partial Class Reportes
         Me.btnMostrar.ForeColor = System.Drawing.Color.White
         Me.btnMostrar.Location = New System.Drawing.Point(0, 0)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(531, 76)
+        Me.btnMostrar.Size = New System.Drawing.Size(637, 76)
         Me.btnMostrar.TabIndex = 5
         Me.btnMostrar.Text = "Mostrar Todo"
         Me.btnMostrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -161,9 +161,9 @@ Partial Class Reportes
         '
         Me.Panel4.Controls.Add(Me.btnCorte)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(540, 127)
+        Me.Panel4.Location = New System.Drawing.Point(646, 127)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(531, 119)
+        Me.Panel4.Size = New System.Drawing.Size(637, 119)
         Me.Panel4.TabIndex = 5
         '
         'btnCorte
@@ -174,7 +174,7 @@ Partial Class Reportes
         Me.btnCorte.ForeColor = System.Drawing.Color.White
         Me.btnCorte.Location = New System.Drawing.Point(238, 15)
         Me.btnCorte.Name = "btnCorte"
-        Me.btnCorte.Size = New System.Drawing.Size(176, 54)
+        Me.btnCorte.Size = New System.Drawing.Size(282, 54)
         Me.btnCorte.TabIndex = 6
         Me.btnCorte.Text = "Corte"
         Me.btnCorte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -191,7 +191,7 @@ Partial Class Reportes
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(3, 127)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(531, 119)
+        Me.Panel5.Size = New System.Drawing.Size(637, 119)
         Me.Panel5.TabIndex = 6
         '
         'Label2
@@ -227,7 +227,7 @@ Partial Class Reportes
         Me.btnBuscarFechas.ForeColor = System.Drawing.Color.White
         Me.btnBuscarFechas.Location = New System.Drawing.Point(296, 58)
         Me.btnBuscarFechas.Name = "btnBuscarFechas"
-        Me.btnBuscarFechas.Size = New System.Drawing.Size(177, 57)
+        Me.btnBuscarFechas.Size = New System.Drawing.Size(283, 57)
         Me.btnBuscarFechas.TabIndex = 7
         Me.btnBuscarFechas.Text = "Buscar "
         Me.btnBuscarFechas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -276,6 +276,7 @@ Partial Class Reportes
         Me.dgvProducto.Location = New System.Drawing.Point(0, 0)
         Me.dgvProducto.Name = "dgvProducto"
         Me.dgvProducto.RowHeadersVisible = False
+        Me.dgvProducto.RowHeadersWidth = 51
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -284,7 +285,7 @@ Partial Class Reportes
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
         Me.dgvProducto.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvProducto.RowTemplate.Height = 24
-        Me.dgvProducto.Size = New System.Drawing.Size(1074, 360)
+        Me.dgvProducto.Size = New System.Drawing.Size(1286, 360)
         Me.dgvProducto.TabIndex = 9
         '
         'Reportes
@@ -292,7 +293,7 @@ Partial Class Reportes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1074, 609)
+        Me.ClientSize = New System.Drawing.Size(1286, 609)
         Me.Controls.Add(Me.dgvProducto)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

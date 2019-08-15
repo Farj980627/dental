@@ -53,7 +53,7 @@ Partial Class Actualizar_Prod
         Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.ForeColor = System.Drawing.Color.White
-        Me.txtID.Location = New System.Drawing.Point(26, 42)
+        Me.txtID.Location = New System.Drawing.Point(863, 47)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(142, 30)
         Me.txtID.TabIndex = 55
@@ -65,7 +65,7 @@ Partial Class Actualizar_Prod
         Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(5, 5)
+        Me.Label13.Location = New System.Drawing.Point(842, 10)
         Me.Label13.Name = "Label13"
         Me.Label13.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label13.Size = New System.Drawing.Size(163, 31)

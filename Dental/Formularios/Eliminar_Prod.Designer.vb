@@ -25,6 +25,8 @@ Partial Class Eliminar_Prod
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.bntSalir = New System.Windows.Forms.PictureBox()
+        CType(Me.bntSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtID
@@ -66,18 +68,30 @@ Partial Class Eliminar_Prod
         Me.Label1.Text = "ELIMINAR PRODUCTO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'bntSalir
+        '
+        Me.bntSalir.Image = Global.Dental.My.Resources.Resources.salir_color
+        Me.bntSalir.Location = New System.Drawing.Point(1011, 12)
+        Me.bntSalir.Name = "bntSalir"
+        Me.bntSalir.Size = New System.Drawing.Size(46, 43)
+        Me.bntSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.bntSalir.TabIndex = 60
+        Me.bntSalir.TabStop = False
+        '
         'Eliminar_Prod
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1069, 609)
+        Me.Controls.Add(Me.bntSalir)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Eliminar_Prod"
         Me.Text = "Eliminar_Prod"
+        CType(Me.bntSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -86,4 +100,5 @@ Partial Class Eliminar_Prod
     Friend WithEvents txtID As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents bntSalir As PictureBox
 End Class

@@ -26,6 +26,7 @@ Partial Class Inventario
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -44,6 +45,7 @@ Partial Class Inventario
         Me.dtpFin = New System.Windows.Forms.DateTimePicker()
         Me.dtpInicio = New System.Windows.Forms.DateTimePicker()
         Me.dgvProducto = New System.Windows.Forms.DataGridView()
+        Me.btnPdf = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -67,19 +69,35 @@ Partial Class Inventario
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1069, 304)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1284, 304)
         Me.TableLayoutPanel1.TabIndex = 7
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnPdf)
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtCodigo)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(537, 3)
+        Me.Panel1.Location = New System.Drawing.Point(645, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(529, 146)
+        Me.Panel1.Size = New System.Drawing.Size(636, 146)
         Me.Panel1.TabIndex = 3
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(308, 79)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(325, 64)
+        Me.Button2.TabIndex = 55
+        Me.Button2.Text = "Admin. Fav"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -113,9 +131,9 @@ Partial Class Inventario
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(343, 68)
+        Me.Button1.Location = New System.Drawing.Point(12, 79)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(183, 75)
+        Me.Button1.Size = New System.Drawing.Size(290, 64)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Admin. Categoría "
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -133,7 +151,7 @@ Partial Class Inventario
         Me.Panel2.Controls.Add(Me.btnMostrar)
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(528, 146)
+        Me.Panel2.Size = New System.Drawing.Size(636, 146)
         Me.Panel2.TabIndex = 4
         '
         'Label1
@@ -142,7 +160,7 @@ Partial Class Inventario
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(223, 2)
+        Me.Label1.Location = New System.Drawing.Point(336, 2)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label1.Size = New System.Drawing.Size(159, 31)
@@ -156,7 +174,7 @@ Partial Class Inventario
         Me.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCategoria.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCategoria.ForeColor = System.Drawing.Color.White
-        Me.txtCategoria.Location = New System.Drawing.Point(229, 36)
+        Me.txtCategoria.Location = New System.Drawing.Point(342, 36)
         Me.txtCategoria.Name = "txtCategoria"
         Me.txtCategoria.Size = New System.Drawing.Size(286, 30)
         Me.txtCategoria.TabIndex = 51
@@ -168,7 +186,7 @@ Partial Class Inventario
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(223, 79)
+        Me.Label5.Location = New System.Drawing.Point(336, 79)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label5.Size = New System.Drawing.Size(169, 31)
@@ -182,7 +200,7 @@ Partial Class Inventario
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(229, 113)
+        Me.txtNombre.Location = New System.Drawing.Point(342, 113)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(286, 30)
         Me.txtNombre.TabIndex = 1
@@ -196,7 +214,7 @@ Partial Class Inventario
         Me.btnMostrar.ForeColor = System.Drawing.Color.White
         Me.btnMostrar.Location = New System.Drawing.Point(9, 16)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(164, 95)
+        Me.btnMostrar.Size = New System.Drawing.Size(272, 95)
         Me.btnMostrar.TabIndex = 5
         Me.btnMostrar.Text = "Mostrar Todo"
         Me.btnMostrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -208,9 +226,9 @@ Partial Class Inventario
         Me.Panel4.Controls.Add(Me.btnEliminar)
         Me.Panel4.Controls.Add(Me.btnNuevo)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(537, 155)
+        Me.Panel4.Location = New System.Drawing.Point(645, 155)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(529, 146)
+        Me.Panel4.Size = New System.Drawing.Size(636, 146)
         Me.Panel4.TabIndex = 5
         '
         'btnActualizar
@@ -219,9 +237,9 @@ Partial Class Inventario
         Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
         Me.btnActualizar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnActualizar.ForeColor = System.Drawing.Color.White
-        Me.btnActualizar.Location = New System.Drawing.Point(115, 82)
+        Me.btnActualizar.Location = New System.Drawing.Point(114, 78)
         Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(317, 59)
+        Me.btnActualizar.Size = New System.Drawing.Size(385, 68)
         Me.btnActualizar.TabIndex = 8
         Me.btnActualizar.Text = "Actualizar Producto"
         Me.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -235,7 +253,7 @@ Partial Class Inventario
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
         Me.btnEliminar.Location = New System.Drawing.Point(297, 1)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(229, 75)
+        Me.btnEliminar.Size = New System.Drawing.Size(336, 75)
         Me.btnEliminar.TabIndex = 7
         Me.btnEliminar.Text = "Eliminar Producto"
         Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -249,7 +267,7 @@ Partial Class Inventario
         Me.btnNuevo.ForeColor = System.Drawing.Color.White
         Me.btnNuevo.Location = New System.Drawing.Point(3, 1)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(229, 75)
+        Me.btnNuevo.Size = New System.Drawing.Size(336, 75)
         Me.btnNuevo.TabIndex = 6
         Me.btnNuevo.Text = "Nuevo Producto"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -263,7 +281,7 @@ Partial Class Inventario
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(3, 155)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(528, 146)
+        Me.Panel5.Size = New System.Drawing.Size(636, 146)
         Me.Panel5.TabIndex = 6
         '
         'btnBuscarFechas
@@ -274,7 +292,7 @@ Partial Class Inventario
         Me.btnBuscarFechas.ForeColor = System.Drawing.Color.White
         Me.btnBuscarFechas.Location = New System.Drawing.Point(152, 73)
         Me.btnBuscarFechas.Name = "btnBuscarFechas"
-        Me.btnBuscarFechas.Size = New System.Drawing.Size(229, 57)
+        Me.btnBuscarFechas.Size = New System.Drawing.Size(337, 57)
         Me.btnBuscarFechas.TabIndex = 6
         Me.btnBuscarFechas.Text = "Buscar Fechas"
         Me.btnBuscarFechas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -286,9 +304,9 @@ Partial Class Inventario
         Me.dtpFin.CalendarForeColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.dtpFin.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFin.Location = New System.Drawing.Point(342, 13)
+        Me.dtpFin.Location = New System.Drawing.Point(364, 18)
         Me.dtpFin.Name = "dtpFin"
-        Me.dtpFin.Size = New System.Drawing.Size(173, 37)
+        Me.dtpFin.Size = New System.Drawing.Size(239, 37)
         Me.dtpFin.TabIndex = 1
         Me.dtpFin.Value = New Date(2019, 4, 8, 0, 0, 0, 0)
         '
@@ -300,7 +318,7 @@ Partial Class Inventario
         Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpInicio.Location = New System.Drawing.Point(9, 13)
         Me.dtpInicio.Name = "dtpInicio"
-        Me.dtpInicio.Size = New System.Drawing.Size(181, 37)
+        Me.dtpInicio.Size = New System.Drawing.Size(239, 37)
         Me.dtpInicio.TabIndex = 0
         Me.dtpInicio.Value = New Date(2019, 4, 5, 0, 0, 0, 0)
         '
@@ -320,6 +338,7 @@ Partial Class Inventario
         Me.dgvProducto.Location = New System.Drawing.Point(0, 0)
         Me.dgvProducto.Name = "dgvProducto"
         Me.dgvProducto.RowHeadersVisible = False
+        Me.dgvProducto.RowHeadersWidth = 51
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -328,15 +347,29 @@ Partial Class Inventario
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
         Me.dgvProducto.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvProducto.RowTemplate.Height = 24
-        Me.dgvProducto.Size = New System.Drawing.Size(1074, 298)
+        Me.dgvProducto.Size = New System.Drawing.Size(1286, 298)
         Me.dgvProducto.TabIndex = 8
+        '
+        'btnPdf
+        '
+        Me.btnPdf.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPdf.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.btnPdf.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPdf.ForeColor = System.Drawing.Color.White
+        Me.btnPdf.Location = New System.Drawing.Point(308, 3)
+        Me.btnPdf.Name = "btnPdf"
+        Me.btnPdf.Size = New System.Drawing.Size(319, 65)
+        Me.btnPdf.TabIndex = 9
+        Me.btnPdf.Text = "PDF!"
+        Me.btnPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnPdf.UseVisualStyleBackColor = False
         '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1074, 609)
+        Me.ClientSize = New System.Drawing.Size(1286, 609)
         Me.Controls.Add(Me.dgvProducto)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLight
@@ -375,4 +408,6 @@ Partial Class Inventario
     Friend WithEvents dtpFin As DateTimePicker
     Friend WithEvents dtpInicio As DateTimePicker
     Friend WithEvents dgvProducto As DataGridView
+    Friend WithEvents Button2 As Button
+    Friend WithEvents btnPdf As Button
 End Class

@@ -7,7 +7,7 @@ Public Class conexion
         db.Server = "localhost"
         db.UserID = "root"
         db.Password = "rootroot"
-        db.Database = "dental"
+        db.Database = "deposito"
         db.SslMode = MySqlSslMode.None
         Dim con As MySqlConnection = New MySqlConnection(db.ToString())
         con.Open()

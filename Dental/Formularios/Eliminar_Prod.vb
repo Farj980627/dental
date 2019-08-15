@@ -12,4 +12,8 @@
             End If
         End If
     End Sub
+
+    Private Sub BntSalir_Click(sender As Object, e As EventArgs) Handles bntSalir.Click
+        Me.Close()
+    End Sub
 End Class

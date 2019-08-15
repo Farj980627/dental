@@ -54,7 +54,7 @@
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
-            If txtNombre.Text = "" Or txtPrecio.Text = "" Or txtCantidad.Text = "" Then
+            If txtNombre.Text = "" Or txtPrecio.Text = "" Then
                 MsgBox("Alguno de los campos con asteriscos contienen información no valida", MsgBoxStyle.Critical, MsgBoxResult.Ok)
             Else
                 consultas.insProducto(cbTipo.Text, txtNombre.Text, txtMarca.Text, txtModelo.Text, txtColor.Text, txtPrecio.Text, txtBarcode.Text, txtCantidad.Text, txtMinimo.Text, dtpFecha.Value.Date.ToString("yyyy-MM-dd"))
@@ -67,6 +67,7 @@
             End If
         Catch ex As Exception
             MsgBox("Posiblemente el codigo ya exista")
+            MsgBox(ex)
 
         End Try
 
