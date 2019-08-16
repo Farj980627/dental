@@ -1,4 +1,4 @@
-﻿Public Class Usuarios
+﻿Public Class usuarios
     Dim newDt As New DataTable
     Dim lvl As String
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -17,6 +17,24 @@
             cbUsuarios.DisplayMember = "user"
         Catch ex As Exception
             MsgBox("El nombre de usuario ya esta en uso")
+        End Try
+    End Sub
+
+    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+        Try
+            If cbNivel.Text = "Administrador" Then
+                lvl = "1"
+            ElseIf cbNivel.Text = "Cajero" Then
+                lvl = "3"
+            ElseIf cbNivel.Text = "Soporte" Then
+                lvl = "4"
+            End If
+            consultas.updUser(newDt(0)("id_user"), txtUsuario.Text, txtPass.Text, lvl)
+            cbUsuarios.DataSource = consultas.getUsuarios
+            cbUsuarios.DisplayMember = "user"
+            MessageBox.Show("Usuario Actualizado")
+        Catch ex As Exception
+
         End Try
     End Sub
 
@@ -39,24 +57,6 @@
             newDt = consultas.getUsuarios2(cbUsuarios.GetItemText(Me.cbUsuarios.SelectedItem))
             txtPass.Text = newDt(0)("password").ToString
             txtUsuario.Text = newDt(0)("user").ToString
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-        Try
-            If cbNivel.Text = "Administrador" Then
-                lvl = "1"
-            ElseIf cbNivel.Text = "Cajero" Then
-                lvl = "3"
-            ElseIf cbNivel.Text = "Soporte" Then
-                lvl = "4"
-            End If
-            consultas.updUser(newDt(0)("id_user"), txtUsuario.Text, txtPass.Text, lvl)
-            cbUsuarios.DataSource = consultas.getUsuarios
-            cbUsuarios.DisplayMember = "user"
-            MessageBox.Show("Usuario Actualizado")
         Catch ex As Exception
 
         End Try

@@ -58,7 +58,7 @@
 
 
     Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
-        loadForm(Usuarios)
+        loadForm(usuarios)
         lblTitulo.Text = "USUARIOS"
     End Sub
 End Class
