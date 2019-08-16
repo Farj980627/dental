@@ -1,14 +1,18 @@
 ﻿Public Class Login
     Private Sub btnAcceder_Click(sender As Object, e As EventArgs) Handles btnAcceder.Click
-        If consultas.login(txtUsuario.Text, txtPass.Text) = True Then
-            Me.Hide()
-            Principal.Show()
-            txtPass.PasswordChar = ""
-            txtPass.Text = "CONTRASEÑA.."
-            txtUsuario.Text = "USUARIO.."
-        Else
-            MsgBox("Credenciales Incorrectas")
-        End If
+        Try
+            If consultas.login(txtUsuario.Text, txtPass.Text) = True Then
+                Me.Hide()
+                Principal.Show()
+                txtPass.PasswordChar = ""
+                txtPass.Text = "CONTRASEÑA.."
+                txtUsuario.Text = "USUARIO.."
+            Else
+                MsgBox("Usuario o Contraseña Incorrectos")
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub bntSalir_Click(sender As Object, e As EventArgs) Handles bntSalir.Click

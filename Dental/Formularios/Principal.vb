@@ -1,4 +1,5 @@
 ﻿Public Class Principal
+    Public Shared userLevel, username As String
     Sub loadForm(ByVal form As Object)
         Try
             If Me.contenedor.Controls.Count > 0 Then
@@ -16,7 +17,22 @@
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ActiveControl = Label1
+
+        Try
+            Me.ActiveControl = Label1
+            If userLevel = "3" Then
+                btnInventario.Enabled = False
+                btnReportes.Enabled = False
+                btnUsuarios.Enabled = False
+            ElseIf userLevel = "4" Then
+                btnInventario.Enabled = False
+                btnReportes.Enabled = False
+                btnUsuarios.Enabled = False
+                btnVentas.Enabled = False
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -37,5 +53,12 @@
     Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
         loadForm(Reportes)
         lblTitulo.Text = "REPORTES"
+    End Sub
+
+
+
+    Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
+        loadForm(Usuarios)
+        lblTitulo.Text = "USUARIOS"
     End Sub
 End Class

@@ -102,7 +102,7 @@ Partial Class Login
         'bntSalir
         '
         Me.bntSalir.Image = Global.Dental.My.Resources.Resources.salir_color
-        Me.bntSalir.Location = New System.Drawing.Point(1102, 27)
+        Me.bntSalir.Location = New System.Drawing.Point(991, 54)
         Me.bntSalir.Name = "bntSalir"
         Me.bntSalir.Size = New System.Drawing.Size(46, 43)
         Me.bntSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

@@ -3,11 +3,13 @@ Public Class consultas
     Public Shared Function login(puser, ppass) As Boolean
         Dim con As MySqlConnection = conexion.conection
         Dim log As Boolean = False
-        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT user, password FROM users WHERE user='{0}' AND password= '{1}'", puser, ppass), con)
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT us.user, us.password, lvl.id_level FROM users us JOIN levels lvl WHERE us.id_level = lvl.id_level AND us.user = '{0}' AND us.password='{1}'", puser, ppass), con)
         Dim reader As MySqlDataReader = cmd.ExecuteReader
         If reader.Read Then
             If reader.HasRows = True Then
                 log = True
+                Principal.userLevel = reader(2).ToString
+                Principal.username = reader(0).ToString
             End If
         End If
         con.Close()
@@ -72,6 +74,45 @@ Public Class consultas
         Dim con As MySqlConnection = conexion.conection
         Dim dt As New DataTable
         Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE barcode LIKE '%{0}%'", pbarcode), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Sub insUser(puser, ppass, plevel)
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("INSERT INTO users(user,password,id_level) VALUES('{0}','{1}','{2}')", puser, ppass, plevel), con)
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+    Public Shared Function getUsuarios() As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM users"), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Sub updUser(pid, puser, ppass, plevel)
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("UPDATE users SET user= '{0}', password='{1}', id_level='{2}' where id_user = '{3}'", puser, ppass, plevel, pid), con)
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+    Public Shared Function getUsuarios2(pusuario) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT id_user,user,password FROM users where user='{0}'", pusuario), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Function getLevel() As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT id_level, identifier FROM levels"), con)
         Dim adap As New MySqlDataAdapter(cmd)
         adap.Fill(dt)
         con.Close()

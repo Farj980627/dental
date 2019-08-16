@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Dental", "Dental\Dental.vbproj", "{6AE59796-AEE0-4BCB-A6B2-2446DEF2FF23}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Deposito", "Dental\Deposito.vbproj", "{6AE59796-AEE0-4BCB-A6B2-2446DEF2FF23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
