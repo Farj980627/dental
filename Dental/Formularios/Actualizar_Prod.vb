@@ -2,7 +2,7 @@
     Dim idpro As String = ""
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
-            If txtNombre.Text = "" Or txtPrecio.Text = "" Or txtCantidad.Text = "" Then
+            If txtNombre.Text = "" Or txtPrecio.Text = "" Then
                 MsgBox("Alguno de los campos con asterisco contiene información no valida", MsgBoxStyle.Critical, MsgBoxResult.Ok)
             Else
                 consultas.updInventarioAll(cbCatDestino.Text, txtNombre.Text, txtMarca.Text, txtModelo.Text, txtColor.Text, txtPrecio.Text, txtBarcode.Text, txtCantidad.Text, txtMinimo.Text, dtpFecha.Value.Date.ToString("yyyy-MM-dd"), idpro)

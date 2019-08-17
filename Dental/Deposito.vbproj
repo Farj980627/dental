@@ -240,6 +240,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Beer_Can_icon-icons.com_68781.ico" />
+    <None Include="Resources\sectdgo.png" />
+    <None Include="Resources\pastel.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

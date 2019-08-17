@@ -323,5 +323,18 @@ Public Class consultas
         con.Close()
         Return dt
     End Function
+    Public Shared Sub delVentas()
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("DELETE FROM sales ORDER BY id_sale DESC LIMIT 1"), con)
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+    Public Shared Sub updInventario2(cantidad, pname)
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("UPDATE products SET quantity='{0}' WHERE id_product='{1}'", cantidad, pname), con)
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
 
 End Class

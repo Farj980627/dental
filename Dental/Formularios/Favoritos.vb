@@ -75,15 +75,15 @@
     End Sub
 
     Private Sub BtnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
-        Try
+        '   Try
 
-            consultas.insFav(txtID1.Text, txtID2.Text, txtID3.Text, txtID4.Text, txtID5.Text, txtID6.Text, txtID7.Text,
+        consultas.insFav(txtID1.Text, txtID2.Text, txtID3.Text, txtID4.Text, txtID5.Text, txtID6.Text, txtID7.Text,
                              txtID8.Text, txtID9.Text, txtID10.Text, txtID11.Text, txtID12.Text, txtID13.Text, txtID14.Text, txtID15.Text)
             MsgBox("Productos Guardados Correctamente")
 
-        Catch ex As Exception
+       ' Catch ex As Exception
 
-        End Try
+        '   End Try
 
     End Sub
 

@@ -5,10 +5,8 @@ Public Class conexion
         Dim db As MySqlConnectionStringBuilder = New MySqlConnectionStringBuilder()
 
         db.Server = "localhost"
-
-
         db.UserID = "root"
-        db.Password = "rootroot"
+        db.Password = "12345678"
         db.Database = "deposito"
 
         db.SslMode = MySqlSslMode.None

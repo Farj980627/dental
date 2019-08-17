@@ -2,6 +2,9 @@
 Public Class Conf_Venta
     Dim cerrar As Boolean = False
     Dim venta As Boolean = False
+    Dim todoa As String = ""
+    Dim cantidadProducto As String = ""
+    Dim dtFinal As New DataTable
 
     Private Sub Conf_Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblTotal.Text = Ventas.sumTot
@@ -14,9 +17,7 @@ Public Class Conf_Venta
             Dim newCantidad As String = ""
             If chBEfectivo.Checked = True Then
 
-
                 For i As Integer = 0 To Ventas.dtTodo.Rows.Count - 1 Step +1
-
                     If consultas.getSix(Ventas.dtTodo(i)("id_product")) = True Then
                         If Ventas.dtTodo.Rows.Count > 0 Then
                             a = Val(6) * Val(Ventas.dtTodo(i)("cantidad"))
@@ -28,6 +29,21 @@ Public Class Conf_Venta
                     End If
                     If Val(a) > Val(b) Then
                         MsgBox("Cantidad de " & Ventas.dtTodo(i)("name") & " en " & " Inventario es insuficiente para realizar la venta")
+                        Dim atras As String = i
+                        For x As Integer = atras To 0 Step -1
+                            consultas.delVentas()
+                            If consultas.getSix(Ventas.dtTodo(x)("id_product")) = True Then
+                                Dim dtSix As New DataTable
+                                dtSix = consultas.notgetSixDT(Ventas.dtTodo(x)("barcode"))
+                                newCantidad = Val(dtSix(0)("quantity")).ToString + Val(a)
+                                consultas.updInventario2(newCantidad, dtSix(0)("id_product"))
+
+                                newCantidad = Val(consultas.getCantidadInventarioBYID(Ventas.dtTodo(x)("id_product")) + Val(Ventas.dtTodo(x)("cantidad")))
+                                consultas.updInventario2(newCantidad, Ventas.dtTodo(x)("id_product"))
+                            End If
+
+
+                        Next
                         cerrar = True
                         venta = False
                         Me.Close()
@@ -51,7 +67,7 @@ Public Class Conf_Venta
                         End If
                     End If
                 Next
-                cerrar = False
+
                 If cerrar = False Then
                     MsgBox("Venta Realizada")
                 End If

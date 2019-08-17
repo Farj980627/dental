@@ -118,9 +118,9 @@ Partial Class Insertar_Prod
         Me.Label9.Location = New System.Drawing.Point(411, 288)
         Me.Label9.Name = "Label9"
         Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label9.Size = New System.Drawing.Size(163, 31)
+        Me.Label9.Size = New System.Drawing.Size(153, 31)
         Me.Label9.TabIndex = 58
-        Me.Label9.Text = "*CANTIDAD "
+        Me.Label9.Text = "CANTIDAD "
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtCantidad
