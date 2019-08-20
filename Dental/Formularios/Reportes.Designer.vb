@@ -202,9 +202,9 @@ Partial Class Reportes
         Me.Label2.Location = New System.Drawing.Point(7, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label2.Size = New System.Drawing.Size(229, 31)
+        Me.Label2.Size = New System.Drawing.Size(144, 31)
         Me.Label2.TabIndex = 46
-        Me.Label2.Text = "FORMA DE PAGO"
+        Me.Label2.Text = "USUARIOS:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'cbTipo

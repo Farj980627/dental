@@ -1,5 +1,5 @@
 ﻿Public Class Principal
-    Public Shared userLevel, username As String
+    Public Shared userLevel, username, idUsuario As String
     Sub loadForm(ByVal form As Object)
         Try
             If Me.contenedor.Controls.Count > 0 Then
@@ -38,6 +38,7 @@
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
         Login.Show()
+        idUsuario = ""
     End Sub
 
     Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click

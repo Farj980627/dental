@@ -82,7 +82,7 @@
     End Sub
 
     Private Sub BtnFavorito8_Click(sender As Object, e As EventArgs) Handles btnFavorito8.Click
-        Fav(consultas.getFavorites(0)("id_2"))
+        Fav(consultas.getFavorites(0)("id_8"))
 
     End Sub
 
@@ -91,7 +91,7 @@
     End Sub
 
     Private Sub BtnFavorito6_Click(sender As Object, e As EventArgs) Handles btnFavorito6.Click
-        Fav(consultas.getFavorites(0)("id_8"))
+        Fav(consultas.getFavorites(0)("id_6"))
     End Sub
     Public Sub Fav(id1)
         Try
@@ -114,9 +114,6 @@
                     Next
 
                     For Each row In carrito2.Rows
-
-
-
                         If row("id_product").ToString.Equals(idproducto) Then
                             idExistente = row("id_product").ToString
 
@@ -158,6 +155,12 @@
                     model = consultas.getProductosByProduct(id1)(0)(3).ToString
                     colorr = consultas.getProductosByProduct(id1)(0)(4).ToString
                     barcode = consultas.getProductosByProduct(id1)(0)(5).ToString
+                    listaIDS.Clear()
+
+                    For jk As Integer = 0 To carrito2.Rows.Count - 1 Step 1
+                        listaIDS.Add(carrito2(jk)("id_product"))
+                    Next
+
 
                     For Each row In carrito2.Rows
                         If row("id_product").ToString.Equals(idproducto) Then
@@ -177,7 +180,8 @@
                         End If
                     Next
                     If soyOtro = True Then
-                        carrito2.Rows.Add(idproducto, producto, price, model, colorr, barcode, "1", 0)
+
+                        carrito2.Rows.Add(idproducto, producto, price, model, colorr, barcode, txtCantidad.Text, 0)
                         Dim tot As Integer = carrito2.Rows.Count - 1
                         carrito2(tot)("total") = Val(carrito2(tot)("cantidad")) * Val(carrito2(tot)("price"))
                         soyOtro = False
@@ -351,10 +355,37 @@
             Dim b As String = ""
             For i As Integer = 0 To dtTodo.Rows.Count - 1 Step +1
                 If consultas.getSix(Ventas.dtTodo(i)("id_product")) = True Then
-                    If Ventas.dtTodo.Rows.Count > 0 Then
-                        a = Val(6) * Val(Ventas.dtTodo(i)("cantidad"))
-                    End If
+
+                    a = Val(6) * Val(Ventas.dtTodo(i)("cantidad"))
+
                     b = consultas.notgetSixDT(Ventas.dtTodo(i)("barcode"))(0)("quantity").ToString
+                    If Val(a) > (b) Then
+                        MsgBox("Cantidad de " & Ventas.dtTodo(i)("name") & " en " & " Inventario es insuficiente para realizar la venta")
+                        cancelaralv()
+                    End If
+
+                ElseIf consultas.getTwo(Ventas.dtTodo(i)("id_product")) = True Then
+
+                    a = Val(2) * Val(Ventas.dtTodo(i)("cantidad"))
+
+                    b = consultas.notgetTwoDT(Ventas.dtTodo(i)("barcode"))(0)("quantity").ToString
+                    If Val(a) > (b) Then
+                        MsgBox("Cantidad de " & Ventas.dtTodo(i)("name") & " en " & " Inventario es insuficiente para realizar la venta")
+                        cancelaralv()
+
+                    End If
+                ElseIf consultas.getDoce(Ventas.dtTodo(i)("id_product")) = True Then
+                    a = Val(12) * Val(Ventas.dtTodo(i)("cantidad"))
+
+                    b = consultas.notgetDoceDT(Ventas.dtTodo(i)("barcode"))(0)("quantity").ToString
+                    If Val(a) > (b) Then
+                        MsgBox("Cantidad de " & Ventas.dtTodo(i)("name") & " en " & " Inventario es insuficiente para realizar la venta")
+                        cancelaralv()
+                    End If
+                ElseIf consultas.getFour(Ventas.dtTodo(i)("id_product")) = True Then
+                    a = Val(4) * Val(Ventas.dtTodo(i)("cantidad"))
+
+                    b = consultas.notgetFourDT(Ventas.dtTodo(i)("barcode"))(0)("quantity").ToString
                     If Val(a) > (b) Then
                         MsgBox("Cantidad de " & Ventas.dtTodo(i)("name") & " en " & " Inventario es insuficiente para realizar la venta")
                         cancelaralv()
@@ -379,6 +410,7 @@
                 carrito.Columns.Remove("cantidad")
                 carrito.Columns.Remove("total")
                 idExistente = ""
+                lblTotal.Text = ""
             End If
         Catch ex As Exception
         End Try

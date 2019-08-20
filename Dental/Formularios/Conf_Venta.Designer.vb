@@ -22,7 +22,6 @@ Partial Class Conf_Venta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.cbElectronico = New System.Windows.Forms.CheckBox()
         Me.chBEfectivo = New System.Windows.Forms.CheckBox()
         Me.btnConfirmar = New System.Windows.Forms.Button()
         Me.txtPagar = New System.Windows.Forms.TextBox()
@@ -31,27 +30,18 @@ Partial Class Conf_Venta
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.bntSalir = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblCambio = New System.Windows.Forms.Label()
         CType(Me.bntSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'cbElectronico
-        '
-        Me.cbElectronico.AutoSize = True
-        Me.cbElectronico.Font = New System.Drawing.Font("Berlin Sans FB", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbElectronico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.cbElectronico.Location = New System.Drawing.Point(614, 157)
-        Me.cbElectronico.Name = "cbElectronico"
-        Me.cbElectronico.Size = New System.Drawing.Size(206, 30)
-        Me.cbElectronico.TabIndex = 35
-        Me.cbElectronico.Text = "Pago Electrónico "
-        Me.cbElectronico.UseVisualStyleBackColor = True
         '
         'chBEfectivo
         '
         Me.chBEfectivo.AutoSize = True
         Me.chBEfectivo.Font = New System.Drawing.Font("Berlin Sans FB", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chBEfectivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.chBEfectivo.Location = New System.Drawing.Point(320, 157)
+        Me.chBEfectivo.Location = New System.Drawing.Point(498, 164)
         Me.chBEfectivo.Name = "chBEfectivo"
         Me.chBEfectivo.Size = New System.Drawing.Size(172, 30)
         Me.chBEfectivo.TabIndex = 34
@@ -65,7 +55,7 @@ Partial Class Conf_Venta
         Me.btnConfirmar.Enabled = False
         Me.btnConfirmar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmar.ForeColor = System.Drawing.Color.White
-        Me.btnConfirmar.Location = New System.Drawing.Point(498, 404)
+        Me.btnConfirmar.Location = New System.Drawing.Point(498, 465)
         Me.btnConfirmar.Name = "btnConfirmar"
         Me.btnConfirmar.Size = New System.Drawing.Size(198, 47)
         Me.btnConfirmar.TabIndex = 33
@@ -147,14 +137,55 @@ Partial Class Conf_Venta
         Me.bntSalir.TabIndex = 36
         Me.bntSalir.TabStop = False
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(348, 390)
+        Me.Label4.Name = "Label4"
+        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label4.Size = New System.Drawing.Size(122, 31)
+        Me.Label4.TabIndex = 37
+        Me.Label4.Text = "CAMBIO:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(492, 390)
+        Me.Label5.Name = "Label5"
+        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label5.Size = New System.Drawing.Size(26, 31)
+        Me.Label5.TabIndex = 39
+        Me.Label5.Text = "$"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCambio
+        '
+        Me.lblCambio.AutoSize = True
+        Me.lblCambio.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCambio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.lblCambio.Location = New System.Drawing.Point(525, 390)
+        Me.lblCambio.Name = "lblCambio"
+        Me.lblCambio.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblCambio.Size = New System.Drawing.Size(215, 31)
+        Me.lblCambio.TabIndex = 38
+        Me.lblCambio.Text = "TOTAL A PAGAR"
+        Me.lblCambio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Conf_Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1069, 609)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblCambio)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.bntSalir)
-        Me.Controls.Add(Me.cbElectronico)
         Me.Controls.Add(Me.chBEfectivo)
         Me.Controls.Add(Me.btnConfirmar)
         Me.Controls.Add(Me.txtPagar)
@@ -170,8 +201,6 @@ Partial Class Conf_Venta
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents cbElectronico As CheckBox
     Friend WithEvents chBEfectivo As CheckBox
     Friend WithEvents btnConfirmar As Button
     Friend WithEvents txtPagar As TextBox
@@ -180,4 +209,7 @@ Partial Class Conf_Venta
     Friend WithEvents lblTotal As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents bntSalir As PictureBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents lblCambio As Label
 End Class

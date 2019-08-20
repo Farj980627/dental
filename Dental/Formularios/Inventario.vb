@@ -3,11 +3,14 @@ Imports iTextSharp.text.pdf
 Public Class Inventario
     Dim newDt As New DataTable
     Dim con As Integer = 0
+    Dim suma As String = ""
+    Dim cantidad As String = ""
 
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             dtpFin.Value = Date.Today
             dtpInicio.Value = Date.Today
+            lblTotalInv.Visible = False
         Catch ex As Exception
 
         End Try
@@ -18,6 +21,8 @@ Public Class Inventario
             newDt = consultas.getProductosAll()
 
             dgvProducto.DataSource = newDt
+            sumaInv()
+            lblTotalInv.Visible = True
 
         Catch ex As Exception
 
@@ -29,7 +34,10 @@ Public Class Inventario
             If e.KeyCode = Keys.Enter Then
                 newDt = consultas.getProductosByProductosParaInv(txtNombre.Text)
                 dgvProducto.DataSource = newDt
+                sumaInv()
+                lblTotalInv.Visible = True
                 txtNombre.Clear()
+
             End If
         Catch ex As Exception
         End Try
@@ -49,6 +57,8 @@ Public Class Inventario
                 MsgBox("La Fecha de inicio es mayor que la final")
             Else
                 dgvProducto.DataSource = consultas.getProductosByDate(dtpInicio.Value.Date.ToString("yyyy-MM-dd"), dtpFin.Value.Date.ToString("yyyy-MM-dd"))
+                sumaInv()
+                lblTotalInv.Visible = True
             End If
         Catch ex As Exception
 
@@ -65,7 +75,9 @@ Public Class Inventario
                 newDt = consultas.getProductosByCategoriaParaInv(txtCategoria.Text)
 
                 dgvProducto.DataSource = newDt
+                sumaInv()
                 txtCategoria.Clear()
+                lblTotalInv.Visible = True
             End If
         Catch ex As Exception
         End Try
@@ -76,7 +88,9 @@ Public Class Inventario
             If e.KeyCode = Keys.Enter Then
                 newDt = consultas.getProductosByBarcodeParaInv(txtCodigo.Text)
                 dgvProducto.DataSource = newDt
+                sumaInv()
                 txtCodigo.Clear()
+                lblTotalInv.Visible = True
             End If
         Catch ex As Exception
         End Try
@@ -99,6 +113,30 @@ Public Class Inventario
     End Sub
 
     Private Sub BtnPdf_Click(sender As Object, e As EventArgs) Handles btnPdf.Click
+        Dim newDtpdf As New DataTable
+        newDtpdf = newDt
+        For Each row In newDtpdf.Rows
+            row("color") = ""
+            row("brand") = ""
+            row("barcode") = ""
+            row("min") = ""
+
+
+        Next
+        newDtpdf.Columns.Remove("date")
+
+        dgvProducto.DataSource = newDtpdf
+
+
+
+
+
+
+
+
+
+
+
         Dim namae As String = InputBox("Nombre del Reporte?")
         Dim doc As Document = New Document(PageSize.A4.Rotate)
         Dim user As String = Environment.UserName
@@ -110,6 +148,7 @@ Public Class Inventario
 
         doc.Add(Chunk.NEWLINE)
         doc.Add(Chunk.NEWLINE)
+        doc.Add(New Paragraph("Fecha: " & Now.ToLongDateString))
         doc.Add(Chunk.NEWLINE)
 
         doc.Add(Chunk.NEWLINE)
@@ -141,4 +180,35 @@ Public Class Inventario
         writer.Close()
         MessageBox.Show("¡PDF generado correctamente!")
     End Sub
+
+    Private Sub DgvProducto_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvProducto.CellFormatting
+        If e.ColumnIndex = 8 Then
+            e.CellStyle.BackColor = Color.Yellow
+            e.CellStyle.ForeColor = Color.FromArgb(1, 49, 111)
+        End If
+    End Sub
+
+    Private Sub sumaInv()
+        suma = ""
+        cantidad = ""
+        Try
+            For i As Integer = 0 To dgvProducto.Rows.Count - 1 Step 1
+                If dgvProducto.Rows(i).Cells(8).Value = "" Then
+
+                    suma = suma
+                Else
+                    cantidad = dgvProducto.Rows(i).Cells(8).Value * dgvProducto.Rows(i).Cells(6).Value
+                    suma = Val(suma) + Val(cantidad)
+                End If
+
+
+            Next
+
+            lblTotalInv.Text = suma
+        Catch
+        End Try
+
+    End Sub
+
+
 End Class

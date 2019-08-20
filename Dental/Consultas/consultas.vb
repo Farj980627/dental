@@ -3,13 +3,14 @@ Public Class consultas
     Public Shared Function login(puser, ppass) As Boolean
         Dim con As MySqlConnection = conexion.conection
         Dim log As Boolean = False
-        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT us.user, us.password, lvl.id_level FROM users us JOIN levels lvl WHERE us.id_level = lvl.id_level AND us.user = '{0}' AND us.password='{1}'", puser, ppass), con)
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT us.id_user, us.user, us.password, lvl.id_level FROM users us JOIN levels lvl WHERE us.id_level = lvl.id_level AND us.user = '{0}' AND us.password='{1}'", puser, ppass), con)
         Dim reader As MySqlDataReader = cmd.ExecuteReader
         If reader.Read Then
             If reader.HasRows = True Then
                 log = True
-                Principal.userLevel = reader(2).ToString
-                Principal.username = reader(0).ToString
+                Principal.userLevel = reader(3).ToString
+                Principal.username = reader(1).ToString
+                Principal.idUsuario = reader(0).ToString
             End If
         End If
         con.Close()
@@ -300,6 +301,45 @@ Public Class consultas
         con.Close()
         Return log
     End Function
+    Public Shared Function getTwo(id) As Boolean
+        Dim con As MySqlConnection = conexion.conection
+        Dim log As Boolean = False
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name LIKE 'Dos%' and id_product= '{0}'", id), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            If reader.HasRows = True Then
+                log = True
+            End If
+        End If
+        con.Close()
+        Return log
+    End Function
+    Public Shared Function getFour(id) As Boolean
+        Dim con As MySqlConnection = conexion.conection
+        Dim log As Boolean = False
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name LIKE 'Cuatro%' and id_product= '{0}'", id), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            If reader.HasRows = True Then
+                log = True
+            End If
+        End If
+        con.Close()
+        Return log
+    End Function
+    Public Shared Function getDoce(id) As Boolean
+        Dim con As MySqlConnection = conexion.conection
+        Dim log As Boolean = False
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name LIKE 'Doce%' and id_product= '{0}'", id), con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            If reader.HasRows = True Then
+                log = True
+            End If
+        End If
+        con.Close()
+        Return log
+    End Function
 
     Public Shared Function notgetSix(brcd) As Boolean
         Dim con As MySqlConnection = conexion.conection
@@ -314,10 +354,39 @@ Public Class consultas
         con.Close()
         Return log
     End Function
+
+
     Public Shared Function notgetSixDT(brcd) As DataTable
         Dim con As MySqlConnection = conexion.conection
         Dim dt As New DataTable
         Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name NOT LIKE 'Six%' and barcode= '{0}' ", brcd), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Function notgetTwoDT(brcd) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name NOT LIKE 'Dos%' and barcode= '{0}' ", brcd), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Function notgetFourDT(brcd) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name NOT LIKE 'Cuatro%' and barcode= '{0}' ", brcd), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Function notgetDoceDT(brcd) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE name NOT LIKE 'Doce%' and barcode= '{0}' ", brcd), con)
         Dim adap As New MySqlDataAdapter(cmd)
         adap.Fill(dt)
         con.Close()
@@ -336,5 +405,41 @@ Public Class consultas
         con.Close()
     End Sub
 
+    Public Shared Function updBarcode(brcd) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT * FROM products WHERE barcode= '{0}' ", brcd), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
+    Public Shared Sub insUserxSale(iduser, idsale)
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("INSERT INTO salesxusers(id_user,id_sale) VALUES('" + iduser + "','" + idsale + "')"), con)
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+    Public Shared Function getidSale() As String
+        Dim con As MySqlConnection = conexion.conection
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT id_sale FROM sales ORDER BY id_sale DESC LIMIT 1 "), con)
+        Dim one As String = ""
+        Dim reader As MySqlDataReader = cmd.ExecuteReader
+        If reader.Read Then
+            one = reader(0).ToString
+        End If
+        Return one
+
+    End Function
+
+    Public Shared Function getVentasByUser(id_usuario, fechaInicio, fechaFin) As DataTable
+        Dim con As MySqlConnection = conexion.conection
+        Dim dt As New DataTable
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT pr.name,pr.type,pr.model,pr.barcode, sl.quantity, sl.date,sl.hour, sl.type, sl.total, us.user FROM sales sl JOIN products pr JOIN users us JOIN salesxusers uxs WHERE sl.id_product = pr.id_product AND uxs.id_sale = sl.id_sale AND us.id_user = '{0}' AND sl.date >= '{1}' AND sl.date <= '{2}'", id_usuario, fechaInicio, fechaFin), con)
+        Dim adap As New MySqlDataAdapter(cmd)
+        adap.Fill(dt)
+        con.Close()
+        Return dt
+    End Function
 
 End Class

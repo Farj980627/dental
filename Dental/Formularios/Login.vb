@@ -1,4 +1,5 @@
 ﻿Public Class Login
+
     Private Sub btnAcceder_Click(sender As Object, e As EventArgs) Handles btnAcceder.Click
         Try
             If consultas.login(txtUsuario.Text, txtPass.Text) = True Then
@@ -7,6 +8,7 @@
                 txtPass.PasswordChar = ""
                 txtPass.Text = "CONTRASEÑA.."
                 txtUsuario.Text = "USUARIO.."
+
             Else
                 MsgBox("Usuario o Contraseña Incorrectos")
             End If

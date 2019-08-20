@@ -22,8 +22,8 @@ Partial Class Inventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnPdf = New System.Windows.Forms.Button()
@@ -46,6 +46,8 @@ Partial Class Inventario
         Me.dtpFin = New System.Windows.Forms.DateTimePicker()
         Me.dtpInicio = New System.Windows.Forms.DateTimePicker()
         Me.dgvProducto = New System.Windows.Forms.DataGridView()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblTotalInv = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -74,8 +76,9 @@ Partial Class Inventario
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.btnPdf)
+        Me.Panel1.Controls.Add(Me.lblTotalInv)
         Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtCodigo)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -91,9 +94,9 @@ Partial Class Inventario
         Me.btnPdf.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnPdf.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPdf.ForeColor = System.Drawing.Color.White
-        Me.btnPdf.Location = New System.Drawing.Point(308, 3)
+        Me.btnPdf.Location = New System.Drawing.Point(483, 78)
         Me.btnPdf.Name = "btnPdf"
-        Me.btnPdf.Size = New System.Drawing.Size(319, 65)
+        Me.btnPdf.Size = New System.Drawing.Size(150, 65)
         Me.btnPdf.TabIndex = 9
         Me.btnPdf.Text = "PDF!"
         Me.btnPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -236,6 +239,7 @@ Partial Class Inventario
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.btnPdf)
         Me.Panel4.Controls.Add(Me.btnActualizar)
         Me.Panel4.Controls.Add(Me.btnEliminar)
         Me.Panel4.Controls.Add(Me.btnNuevo)
@@ -251,7 +255,7 @@ Partial Class Inventario
         Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.btnActualizar.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnActualizar.ForeColor = System.Drawing.Color.White
-        Me.btnActualizar.Location = New System.Drawing.Point(114, 78)
+        Me.btnActualizar.Location = New System.Drawing.Point(3, 81)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(385, 68)
         Me.btnActualizar.TabIndex = 8
@@ -340,36 +344,64 @@ Partial Class Inventario
         '
         Me.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.dgvProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.dgvProducto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.dgvProducto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProducto.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvProducto.Location = New System.Drawing.Point(0, 0)
         Me.dgvProducto.Name = "dgvProducto"
         Me.dgvProducto.RowHeadersVisible = False
         Me.dgvProducto.RowHeadersWidth = 51
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.dgvProducto.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(249, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.dgvProducto.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvProducto.RowTemplate.Height = 24
-        Me.dgvProducto.Size = New System.Drawing.Size(1286, 298)
+        Me.dgvProducto.Size = New System.Drawing.Size(1439, 298)
         Me.dgvProducto.TabIndex = 8
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(302, 4)
+        Me.Label3.Name = "Label3"
+        Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label3.Size = New System.Drawing.Size(141, 62)
+        Me.Label3.TabIndex = 55
+        Me.Label3.Text = "Total " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Inventario:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblTotalInv
+        '
+        Me.lblTotalInv.AutoSize = True
+        Me.lblTotalInv.BackColor = System.Drawing.Color.White
+        Me.lblTotalInv.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalInv.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.lblTotalInv.Location = New System.Drawing.Point(449, 20)
+        Me.lblTotalInv.Name = "lblTotalInv"
+        Me.lblTotalInv.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblTotalInv.Size = New System.Drawing.Size(116, 31)
+        Me.lblTotalInv.TabIndex = 56
+        Me.lblTotalInv.Text = "CODIGO"
+        Me.lblTotalInv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1286, 609)
+        Me.ClientSize = New System.Drawing.Size(1439, 609)
         Me.Controls.Add(Me.dgvProducto)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLight
@@ -410,4 +442,6 @@ Partial Class Inventario
     Friend WithEvents dgvProducto As DataGridView
     Friend WithEvents Button2 As Button
     Friend WithEvents btnPdf As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblTotalInv As Label
 End Class

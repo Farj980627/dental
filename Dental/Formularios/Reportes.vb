@@ -33,17 +33,13 @@ Public Class Reportes
 
     Private Sub btnBuscarFechas_Click(sender As Object, e As EventArgs) Handles btnBuscarFechas.Click
         Try
-            btnCorte.Visible = True
+
             If dtpFin.Value < dtpInicio.Value Then
                 MsgBox("La Fecha de inicio es mayor que la final")
             Else
-                If cbTipo.Text = "Todos Los Pagos" Then
-                    dgvProducto.DataSource = consultas.getDateReport(dtpInicio.Value.Date.ToString("yyyy-MM-dd"), dtpFin.Value.Date.ToString("yyyy-MM-dd"))
-                    totalreporte()
-                Else
-                    dgvProducto.DataSource = consultas.getDateTypeReport(dtpInicio.Value.Date.ToString("yyyy-MM-dd"), dtpFin.Value.Date.ToString("yyyy-MM-dd"), cbTipo.Text)
-                    totalreporte()
-                End If
+
+                dgvProducto.DataSource = consultas.getVentasByUser(consultas.getUsuarios2(cbTipo.Text)(0)("id_user"), dtpInicio.Value.Date.ToString("yyyy-MM-dd"), dtpFin.Value.Date.ToString("yyyy-MM-dd"))
+                totalreporte()
             End If
         Catch ex As Exception
 
@@ -79,6 +75,8 @@ Public Class Reportes
     Private Sub Reportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpFin.Value = Date.Today
         dtpInicio.Value = Date.Today
+        cbTipo.DataSource = consultas.getUsuarios
+        cbTipo.DisplayMember = "user"
     End Sub
 
     Private Sub btnCorte_Click(sender As Object, e As EventArgs) Handles btnCorte.Click
