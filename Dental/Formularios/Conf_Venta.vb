@@ -7,10 +7,12 @@ Public Class Conf_Venta
         lblTotal.Text = Ventas.sumTot
         chBEfectivo.Checked = True
         lblCambio.Visible = False
+        Me.ActiveControl = txtPagar
+
     End Sub
     Private Sub vender()
-        ' Try
-        Dim a As String = ""
+        Try
+            Dim a As String = ""
             Dim b As String = ""
             Dim newCantidad As String = ""
 
@@ -53,14 +55,14 @@ Public Class Conf_Venta
                     consultas.updInventario(newCantidad, Ventas.dtTodo(i)("id_product"))
                     consultas.insSale(Ventas.dtTodo(i)("id_product"), Ventas.dtTodo(i)("cantidad"), Date.Today.ToString("yyyy-MM-dd"), DateTime.Now.ToShortTimeString, "Efectivo", Ventas.dtTodo(i)("total"))
 
-                consultas.insUserxSale(Principal.idUsuario, consultas.getidSale)
-            End If
+                    consultas.insUserxSale(Principal.idUsuario, consultas.getidSale)
+                End If
 
 
 
             Next
 
-            MsgBox("Venta Realizada")
+
 
 
 
@@ -70,9 +72,9 @@ Public Class Conf_Venta
             Me.Close()
             Ventas.Refresh()
 
-        ' Catch ex As Exception
+        Catch ex As Exception
 
-        ' End Try
+        End Try
     End Sub
     Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
         vender()

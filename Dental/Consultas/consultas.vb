@@ -435,7 +435,7 @@ Public Class consultas
     Public Shared Function getVentasByUser(id_usuario, fechaInicio, fechaFin) As DataTable
         Dim con As MySqlConnection = conexion.conection
         Dim dt As New DataTable
-        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT pr.name,pr.type,pr.model,pr.barcode, sl.quantity, sl.date,sl.hour, sl.type, sl.total, us.user FROM sales sl JOIN products pr JOIN users us JOIN salesxusers uxs WHERE sl.id_product = pr.id_product AND uxs.id_sale = sl.id_sale AND uxs.id_user = us.id_user AND us.id_user = '{0}' AND sl.date >= '{1}' AND sl.date <= '{2}'", id_usuario, fechaInicio, fechaFin), con)
+        Dim cmd As MySqlCommand = New MySqlCommand(String.Format("SELECT pr.name,pr.type,pr.model,pr.barcode, sl.quantity, sl.date,sl.hour, sl.total, us.user FROM sales sl JOIN products pr JOIN users us JOIN salesxusers uxs WHERE sl.id_product = pr.id_product AND uxs.id_sale = sl.id_sale AND uxs.id_user = us.id_user AND us.id_user = '{0}' AND sl.date >= '{1}' AND sl.date <= '{2}'", id_usuario, fechaInicio, fechaFin), con)
         Dim adap As New MySqlDataAdapter(cmd)
         adap.Fill(dt)
         con.Close()

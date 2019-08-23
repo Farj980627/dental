@@ -322,7 +322,7 @@
         Try
             dgvProducto.DataSource = vacio
             txtCantidad.Text = ""
-            txtCodigo.Text = "CODIGO DE BARRAS"
+
 
             txtProducto.Text = "PRODUCTOS"
             dataBusProductos.DataSource = vacio

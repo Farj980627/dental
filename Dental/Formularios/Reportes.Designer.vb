@@ -33,7 +33,6 @@ Partial Class Reportes
         Me.bntDiario = New System.Windows.Forms.Button()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.btnCorte = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbTipo = New System.Windows.Forms.ComboBox()
@@ -72,7 +71,6 @@ Partial Class Reportes
         '
         Me.Panel1.Controls.Add(Me.lblTotal)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(646, 3)
         Me.Panel1.Name = "Panel1"
@@ -106,13 +104,13 @@ Partial Class Reportes
         '
         'txtNombre
         '
-        Me.txtNombre.BackColor = System.Drawing.Color.White
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(125, 74)
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
+        Me.txtNombre.Location = New System.Drawing.Point(121, 47)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(286, 30)
+        Me.txtNombre.Size = New System.Drawing.Size(335, 30)
         Me.txtNombre.TabIndex = 1
         Me.txtNombre.Text = "NOMBRE PRODUCTO"
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -159,27 +157,12 @@ Partial Class Reportes
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.btnCorte)
+        Me.Panel4.Controls.Add(Me.txtNombre)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(646, 127)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(637, 119)
         Me.Panel4.TabIndex = 5
-        '
-        'btnCorte
-        '
-        Me.btnCorte.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCorte.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnCorte.Font = New System.Drawing.Font("Berlin Sans FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCorte.ForeColor = System.Drawing.Color.White
-        Me.btnCorte.Location = New System.Drawing.Point(238, 15)
-        Me.btnCorte.Name = "btnCorte"
-        Me.btnCorte.Size = New System.Drawing.Size(282, 54)
-        Me.btnCorte.TabIndex = 6
-        Me.btnCorte.Text = "Corte"
-        Me.btnCorte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnCorte.UseVisualStyleBackColor = False
-        Me.btnCorte.Visible = False
         '
         'Panel5
         '
@@ -304,6 +287,7 @@ Partial Class Reportes
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.dgvProducto, System.ComponentModel.ISupportInitialize).EndInit()
@@ -320,7 +304,6 @@ Partial Class Reportes
     Friend WithEvents bntDiario As Button
     Friend WithEvents btnMostrar As Button
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents btnCorte As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents cbTipo As ComboBox

@@ -17,7 +17,7 @@ Public Class Reportes
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Try
-            btnCorte.Visible = True
+
             dgvProducto.DataSource = consultas.getReportsAll()
             totalreporte()
         Catch ex As Exception
@@ -26,7 +26,7 @@ Public Class Reportes
     End Sub
 
     Private Sub bntDiario_Click(sender As Object, e As EventArgs) Handles bntDiario.Click
-        btnCorte.Visible = True
+
         dgvProducto.DataSource = consultas.getDayliReport(Date.Today.ToString("yyyy-MM-dd"))
         totalreporte()
     End Sub
@@ -58,7 +58,7 @@ Public Class Reportes
 
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
         Try
-            btnCorte.Visible = True
+
             dgvProducto.DataSource = consultas.getProductReport(txtNombre.Text)
             totalreporte()
         Catch ex As Exception
@@ -79,17 +79,5 @@ Public Class Reportes
         cbTipo.DisplayMember = "user"
     End Sub
 
-    Private Sub btnCorte_Click(sender As Object, e As EventArgs) Handles btnCorte.Click
-        Try
-            Dim dtCorte As New DataTable
-            dtCorte = dgvProducto.DataSource
 
-
-            btnCorte.Visible = False
-
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
 End Class
